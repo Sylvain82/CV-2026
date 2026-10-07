@@ -30,7 +30,7 @@ window.SITE_DATA = {
       resume:
         "Gammes de travail pour les chantiers du site (Airbus, Dassault, Inmarsat…) et développement d'outils internes pour automatiser le suivi de production.",
       description:
-        "De retour chez JVAeroservices, je reprends la fonction de technicien méthodes. En parallèle, je développe des outils internes pour automatiser le suivi de production : tableaux de bord Excel/VBA alimentés par SILOG, numérisation et classement automatique des documents en Python, application web de gestion des commandes. Je m'appuie sur les assistants IA (Claude) pour accélérer le développement et j'intègre l'IA dans certains outils, par exemple pour lire et classer des documents.",
+        "De retour chez JVAeroservices, je reprends la fonction de technicien méthodes. En parallèle, je développe des outils internes pour automatiser le suivi de production : tableaux de bord Excel/VBA alimentés par SILOG. J'utilise de temps en temps Claude pour créer des macros Excel ou de petits programmes d'extraction de données.",
     },
     {
       poste: "Préparateur technique programme A320",
@@ -129,11 +129,11 @@ window.SITE_DATA = {
     },
     {
       titre: "Développement & automatisation",
-      items: ["Python", "VBA / Excel", "React", "FastAPI", "PostgreSQL", "JavaScript", "PHP / Symfony", "Git"],
+      items: ["VBA / Excel", "JavaScript", "PHP / Symfony", "Git"],
     },
     {
       titre: "IA & assistants de code",
-      items: ["Claude", "Claude Code", "API Claude (vision, analyse de documents)", "Prompt engineering", "Relecture et test du code généré"],
+      items: ["Claude", "Macros Excel assistées par IA", "Extraction de données"],
     },
     {
       titre: "Organisation",
