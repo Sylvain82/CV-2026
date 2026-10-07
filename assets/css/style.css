@@ -174,7 +174,7 @@ p { margin: 0 0 1em; }
 .stat__value { font-family: var(--font-title); font-size: 1.7rem; font-weight: 700; color: var(--primary); line-height: 1.1; }
 .stat__label { color: var(--muted); font-size: .92rem; margin: 4px 0 0; }
 
-.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
 .feature { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; }
 .feature__icon { font-size: 1.8rem; margin-bottom: 8px; }
 .feature p { color: var(--muted); margin: 0; }

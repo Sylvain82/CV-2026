@@ -30,7 +30,7 @@ window.SITE_DATA = {
       resume:
         "Gammes de travail pour les chantiers du site (Airbus, Dassault, Inmarsat…) et développement d'outils internes pour automatiser le suivi de production.",
       description:
-        "De retour chez JVAeroservices, je reprends la fonction de technicien méthodes. En parallèle, je développe des outils internes pour automatiser le suivi de production : tableaux de bord Excel/VBA alimentés par SILOG, numérisation et classement automatique des documents en Python, application web de gestion des commandes.",
+        "De retour chez JVAeroservices, je reprends la fonction de technicien méthodes. En parallèle, je développe des outils internes pour automatiser le suivi de production : tableaux de bord Excel/VBA alimentés par SILOG, numérisation et classement automatique des documents en Python, application web de gestion des commandes. Je m'appuie sur les assistants IA (Claude) pour accélérer le développement et j'intègre l'IA dans certains outils, par exemple pour lire et classer des documents.",
     },
     {
       poste: "Préparateur technique programme A320",
@@ -132,6 +132,10 @@ window.SITE_DATA = {
       items: ["Python", "VBA / Excel", "React", "FastAPI", "PostgreSQL", "JavaScript", "PHP / Symfony", "Git"],
     },
     {
+      titre: "IA & assistants de code",
+      items: ["Claude", "Claude Code", "API Claude (vision, analyse de documents)", "Prompt engineering", "Relecture et test du code généré"],
+    },
+    {
       titre: "Organisation",
       items: ["Management par le flux", "Gestion de projet", "Trello"],
     },
@@ -143,36 +147,6 @@ window.SITE_DATA = {
      - image (facultatif) : sinon l'icône est utilisée
      - lien (facultatif) : la carte devient cliquable */
   projets: [
-    {
-      titre: "Application de gestion des commandes",
-      categorie: "metier",
-      accueil: true,
-      icone: "🗂️",
-      tags: ["React", "FastAPI", "PostgreSQL", "JWT"],
-      resume: "Refonte web d'une application WinDev : suivi complet des commandes, authentification et droits par rôle.",
-      description:
-        "Le besoin : centraliser le suivi des commandes et le rendre accessible depuis un navigateur. La solution : une API FastAPI sur PostgreSQL, une interface React, une authentification JWT avec des droits selon les rôles, et la gestion complète du cycle de vie d'une commande.",
-    },
-    {
-      titre: "Numérisation et classement automatique des accusés de réception",
-      categorie: "metier",
-      accueil: true,
-      icone: "📄",
-      tags: ["Python", "IA (vision)", "Scanner Fujitsu"],
-      resume: "Les accusés de réception scannés sont détectés, lus et classés automatiquement, sans saisie manuelle.",
-      description:
-        "Le besoin : supprimer le tri et la saisie manuels des accusés de réception. La solution : un script Python surveille le dossier du scanner, fait lire chaque document par un modèle d'IA, puis le classe automatiquement.",
-    },
-    {
-      titre: "Tableaux de bord de production Excel / VBA",
-      categorie: "metier",
-      accueil: true,
-      icone: "📊",
-      tags: ["VBA", "Excel", "SILOG"],
-      resume: "Indicateurs automatisés à partir des exports SILOG, calendriers dynamiques et import de données en un clic.",
-      description:
-        "Classeurs d'indicateurs alimentés par les exports SILOG : import des données en un clic, graphiques de suivi, calendriers dynamiques intégrant les jours fériés français. Les macros ont été réécrites pour rester compatibles avec les mises à jour de sécurité de Microsoft 365.",
-    },
     {
       titre: "Tirage au sort pour l'équipe",
       categorie: "metier",
