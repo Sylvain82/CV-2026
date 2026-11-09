@@ -187,12 +187,13 @@ window.SITE_DATA = {
         "Préparation de missions de cartographie par drone : calcul de la résolution au sol (GSD) selon l'altitude et la caméra, génération de grilles de points de passage GPS pour couvrir une zone avec le bon recouvrement, puis traitement des photos en carte et modèle 3D avec OpenDroneMap.",
     },
     {
-      titre: "DataFoot",
-      categorie: "formation",
+      titre: "DataFoot — statistiques de football",
+      categorie: "perso",
       image: "assets/img/ballon.jpg",
-      tags: ["API", "JavaScript"],
-      description: "Site de statistiques sur le football alimenté par une API externe.",
-      lien: "https://statfoot-c218f3cfcd48.herokuapp.com/",
+      tags: ["PHP / Symfony", "API", "JavaScript", "Docker"],
+      description:
+        "Site de statistiques de football : classements, matchs du jour, fiches de clubs et meilleurs buteurs, alimenté par l'API gratuite football-data.org. Les clés d'accès restent côté serveur et les réponses sont mises en cache. Hébergé gratuitement sur Render : la première ouverture après une période d'inactivité peut prendre environ une minute.",
+      lien: "https://statfoot-1.onrender.com/",
     },
     {
       titre: "Carnet de voyages en parallax",
