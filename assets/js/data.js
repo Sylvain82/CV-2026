@@ -133,7 +133,11 @@ window.SITE_DATA = {
     },
     {
       titre: "IA & assistants de code",
-      items: ["Claude", "Macros Excel assistées par IA", "Extraction de données"],
+      items: ["Claude", "Macros Excel assistées par IA", "Extraction de données", "Vision par ordinateur (analyse vidéo)"],
+    },
+    {
+      titre: "Drone & photogrammétrie",
+      items: ["Planification de vol de drone", "Grilles de points de passage GPS", "Calcul du GSD", "OpenDroneMap", "DJI Mini 4 Pro"],
     },
     {
       titre: "Organisation",
@@ -142,7 +146,7 @@ window.SITE_DATA = {
   ],
 
   /* Projets.
-     - categorie : "metier" (outils métier) ou "formation" (projets de formation)
+     - categorie : "metier" (outils métier), "perso" (projets personnels) ou "formation" (projets de formation)
      - accueil : true pour l'afficher dans "Projets récents" sur l'accueil
      - image (facultatif) : sinon l'icône est utilisée
      - lien (facultatif) : la carte devient cliquable */
@@ -157,12 +161,30 @@ window.SITE_DATA = {
       lien: "https://github.com/Sylvain82/tirage",
     },
     {
-      titre: "Clone de Trello",
-      categorie: "formation",
+      titre: "Trellow – tableau Kanban d'équipe",
+      categorie: "metier",
       image: "assets/img/trello.png",
-      tags: ["JavaScript"],
-      description: "Tableau de tâches en glisser-déposer, inspiré de Trello, en JavaScript natif.",
-      lien: "https://sylvain82.github.io/trellow/",
+      tags: ["JavaScript", "Firebase", "GitHub Actions"],
+      description:
+        "Tableau Kanban collaboratif inspiré de Trello, en un seul fichier HTML : glisser-déposer, présence et synchronisation en temps réel, limites WIP, récurrence, tableau de bord. L'application est protégée par connexion : le code et la documentation sont sur GitHub.",
+      lien: "https://github.com/Sylvain82/trellow",
+    },
+    {
+      titre: "Analyse de matchs de foot par vision par ordinateur",
+      categorie: "perso",
+      icone: "⚽",
+      tags: ["Vision par ordinateur", "Roboflow Sports", "Statistiques", "Export Excel"],
+      description:
+        "Application locale qui analyse la vidéo d'un match : détection des joueurs avec le projet open source Roboflow Sports, projection sur le terrain, nettoyage des trajectoires, puis statistiques (largeur et profondeur des équipes, distances, vitesses, cartes de chaleur) et export Excel. Tout se calcule sur l'ordinateur : aucune vidéo n'est envoyée sur internet.",
+      lien: "https://github.com/Sylvain82/analyse-match",
+    },
+    {
+      titre: "Planification de vol de drone et cartographie",
+      categorie: "perso",
+      icone: "🚁",
+      tags: ["DJI Mini 4 Pro", "Photogrammétrie", "OpenDroneMap", "GSD"],
+      description:
+        "Préparation de missions de cartographie par drone : calcul de la résolution au sol (GSD) selon l'altitude et la caméra, génération de grilles de points de passage GPS pour couvrir une zone avec le bon recouvrement, puis traitement des photos en carte et modèle 3D avec OpenDroneMap.",
     },
     {
       titre: "DataFoot",

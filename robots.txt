@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sylvain82.github.io/sitemap.xml
+Sitemap: https://sylvain82.github.io/CV-2026/sitemap.xml

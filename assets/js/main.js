@@ -124,6 +124,7 @@
     });
   fill("projets-accueil", projets.filter((p) => p.accueil).map((p) => projetCard(p, true)).join(""));
   fill("projets-metier", projets.filter((p) => p.categorie === "metier").map((p) => projetCard(p)).join(""));
+  fill("projets-perso", projets.filter((p) => p.categorie === "perso").map((p) => projetCard(p)).join(""));
   fill("projets-formation", projets.filter((p) => p.categorie === "formation").map((p) => projetCard(p)).join(""));
 
   /* ---------- Rendu : CV ---------- */

@@ -29,9 +29,16 @@ Sur la page CV, le bouton **« Télécharger en PDF »** ouvre l'impression du n
 
 ## Mise en ligne sur GitHub Pages
 
-1. Créer un dépôt nommé **`sylvain82.github.io`** et y pousser ces fichiers.
-2. Dans *Settings → Pages*, choisir la branche `main`, dossier `/ (root)`.
-3. Le site est en ligne sur https://sylvain82.github.io/
+1. Pousser ces fichiers dans le dépôt **`CV-2026`**.
+2. Dans *Settings → Pages*, choisir *Deploy from a branch*, branche `main`, dossier `/ (root)`, puis enregistrer.
+3. Le site est en ligne sur https://sylvain82.github.io/CV-2026/ (compter une à deux minutes après chaque envoi).
 
-Si le site est publié à une autre adresse, remplacer `https://sylvain82.github.io/` dans les fichiers `.html`,
-`robots.txt` et `sitemap.xml` (rechercher/remplacer).
+Tous les liens internes sont relatifs : le site fonctionne aussi bien à la racine que dans un sous-dossier.
+Si le site est publié à une autre adresse (par exemple dans un dépôt `sylvain82.github.io`), remplacer
+`https://sylvain82.github.io/CV-2026/` dans les fichiers `.html`, `robots.txt` et `sitemap.xml`
+(rechercher/remplacer).
+
+## Ajouter un projet
+
+Dans `assets/js/data.js`, ajouter un bloc dans la liste `projets` avec `categorie` : `"metier"`, `"perso"` ou `"formation"`.
+Sans `lien`, la carte s'affiche sans bouton « Voir le projet ».
