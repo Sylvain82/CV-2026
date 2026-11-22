@@ -187,6 +187,15 @@ window.SITE_DATA = {
         "Préparation de missions de cartographie par drone : calcul de la résolution au sol (GSD) selon l'altitude et la caméra, génération de grilles de points de passage GPS pour couvrir une zone avec le bon recouvrement, puis traitement des photos en carte et modèle 3D avec OpenDroneMap.",
     },
     {
+      titre: "Caméras Maison — application Android de domotique",
+      categorie: "perso",
+      icone: "📹",
+      tags: ["Android", "Kotlin", "Jetpack Compose", "RTSP"],
+      description:
+        "Application Android qui réunit sur un même écran les caméras de la maison en direct (flux RTSP locaux, en mosaïque ou plein écran), l'interphone vidéo, les lumières Philips Hue, la climatisation Daikin et la télé LG. Stockage chiffré, verrouillage par empreinte et compilation automatique de l'APK via GitHub Actions. Version publique nettoyée du code sur GitHub.",
+      lien: "https://github.com/Sylvain82/cameras-maison-public",
+    },
+    {
       titre: "DataFoot — statistiques de football",
       categorie: "perso",
       image: "assets/img/ballon.jpg",
