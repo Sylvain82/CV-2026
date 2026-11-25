@@ -210,8 +210,8 @@ window.SITE_DATA = {
       icone: "🛒",
       tags: ["PHP / Symfony", "PostgreSQL", "Stripe", "Docker"],
       description:
-        "Boutique en ligne complète sous Symfony 7 : catalogue avec recherche et filtres, panier, comptes clients, parcours de commande avec paiement Stripe (ou simulé), email de confirmation et espace d'administration (produits, photos, commandes, clients). Base PostgreSQL, déploiement Docker sur Render.",
-      lien: "https://github.com/Sylvain82/boutique25",
+        "Boutique en ligne complète sous Symfony 7 : catalogue avec recherche et filtres, panier, comptes clients, parcours de commande avec paiement Stripe (ou simulé), email de confirmation et espace d'administration (produits, photos, commandes, clients). Base PostgreSQL, déploiement Docker sur Render : la première ouverture après une période d'inactivité peut prendre environ une minute. Le code est sur GitHub (github.com/Sylvain82/boutique25).",
+      lien: "https://boutique25.onrender.com/",
     },
     {
       titre: "Carnet de voyages en parallax",
