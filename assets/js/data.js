@@ -153,7 +153,7 @@ window.SITE_DATA = {
   projets: [
     {
       titre: "Tirage au sort pour l'équipe",
-      categorie: "metier",
+      categorie: "perso",
       icone: "🎲",
       tags: ["JavaScript", "Firebase", "GitHub Actions"],
       description:
@@ -197,12 +197,21 @@ window.SITE_DATA = {
     },
     {
       titre: "DataFoot — statistiques de football",
-      categorie: "perso",
+      categorie: "metier",
       image: "assets/img/ballon.jpg",
       tags: ["PHP / Symfony", "API", "JavaScript", "Docker"],
       description:
         "Site de statistiques de football : classements, matchs du jour, fiches de clubs et meilleurs buteurs, alimenté par l'API gratuite football-data.org. Les clés d'accès restent côté serveur et les réponses sont mises en cache. Hébergé gratuitement sur Render : la première ouverture après une période d'inactivité peut prendre environ une minute.",
       lien: "https://statfoot-1.onrender.com/",
+    },
+    {
+      titre: "Boutique25 — boutique en ligne",
+      categorie: "perso",
+      icone: "🛒",
+      tags: ["PHP / Symfony", "PostgreSQL", "Stripe", "Docker"],
+      description:
+        "Boutique en ligne complète sous Symfony 7 : catalogue avec recherche et filtres, panier, comptes clients, parcours de commande avec paiement Stripe (ou simulé), email de confirmation et espace d'administration (produits, photos, commandes, clients). Base PostgreSQL, déploiement Docker sur Render.",
+      lien: "https://github.com/Sylvain82/boutique25",
     },
     {
       titre: "Carnet de voyages en parallax",
