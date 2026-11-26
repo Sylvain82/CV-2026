@@ -148,13 +148,15 @@ window.SITE_DATA = {
   /* Projets.
      - categorie : "metier" (outils métier), "perso" (projets personnels) ou "formation" (projets de formation)
      - accueil : true pour l'afficher dans "Projets récents" sur l'accueil
-     - image (facultatif) : sinon l'icône est utilisée
-     - lien (facultatif) : la carte devient cliquable */
+     - image (facultatif) : capture d'écran (assets/img/projets/, format 16:10) ;
+       sinon "icone" : nom d'une icône du fichier main.js (dice, kanban, chart, map, camera, cart…)
+     - lien (facultatif) : site en ligne, démo ou dépôt GitHub (bouton principal)
+     - code (facultatif) : dépôt GitHub, quand "lien" pointe déjà vers le site en ligne */
   projets: [
     {
       titre: "Tirage au sort pour l'équipe",
       categorie: "perso",
-      icone: "🎲",
+      image: "assets/img/projets/tirage.webp",
       tags: ["JavaScript", "Firebase", "GitHub Actions"],
       description:
         "Petite application web interne : tirage au sort équitable, données synchronisées en temps réel avec Firebase et notifications automatiques via GitHub Actions.",
@@ -163,7 +165,7 @@ window.SITE_DATA = {
     {
       titre: "Trellow – tableau Kanban d'équipe",
       categorie: "metier",
-      image: "assets/img/trello.png",
+      icone: "kanban",
       tags: ["JavaScript", "Firebase", "GitHub Actions"],
       description:
         "Tableau Kanban collaboratif inspiré de Trello, en un seul fichier HTML : glisser-déposer, présence et synchronisation en temps réel, limites WIP, récurrence, tableau de bord. L'application est protégée par connexion : le code et la documentation sont sur GitHub.",
@@ -172,7 +174,7 @@ window.SITE_DATA = {
     {
       titre: "Analyse de matchs de foot par vision par ordinateur",
       categorie: "perso",
-      icone: "⚽",
+      image: "assets/img/projets/analyse-match.webp",
       tags: ["Vision par ordinateur", "Roboflow Sports", "Statistiques", "Export Excel"],
       description:
         "Application locale qui analyse la vidéo d'un match : détection des joueurs avec le projet open source Roboflow Sports, projection sur le terrain, nettoyage des trajectoires, puis statistiques (largeur et profondeur des équipes, distances, vitesses, cartes de chaleur) et export Excel. Tout se calcule sur l'ordinateur : aucune vidéo n'est envoyée sur internet.",
@@ -181,7 +183,7 @@ window.SITE_DATA = {
     {
       titre: "Planification de vol de drone et cartographie",
       categorie: "perso",
-      icone: "🚁",
+      icone: "map",
       tags: ["DJI Mini 4 Pro", "Photogrammétrie", "OpenDroneMap", "GSD"],
       description:
         "Préparation de missions de cartographie par drone : calcul de la résolution au sol (GSD) selon l'altitude et la caméra, génération de grilles de points de passage GPS pour couvrir une zone avec le bon recouvrement, puis traitement des photos en carte et modèle 3D avec OpenDroneMap.",
@@ -189,7 +191,7 @@ window.SITE_DATA = {
     {
       titre: "Caméras Maison — application Android de domotique",
       categorie: "perso",
-      icone: "📹",
+      icone: "camera",
       tags: ["Android", "Kotlin", "Jetpack Compose", "RTSP"],
       description:
         "Application Android qui réunit sur un même écran les caméras de la maison en direct (flux RTSP locaux, en mosaïque ou plein écran), l'interphone vidéo, les lumières Philips Hue, la climatisation Daikin et la télé LG. Stockage chiffré, verrouillage par empreinte et compilation automatique de l'APK via GitHub Actions. Version publique nettoyée du code sur GitHub.",
@@ -198,7 +200,7 @@ window.SITE_DATA = {
     {
       titre: "DataFoot — statistiques de football",
       categorie: "metier",
-      image: "assets/img/ballon.jpg",
+      image: "assets/img/projets/datafoot.webp",
       tags: ["PHP / Symfony", "API", "JavaScript", "Docker"],
       description:
         "Site de statistiques de football : classements, matchs du jour, fiches de clubs et meilleurs buteurs, alimenté par l'API gratuite football-data.org. Les clés d'accès restent côté serveur et les réponses sont mises en cache. Hébergé gratuitement sur Render : la première ouverture après une période d'inactivité peut prendre environ une minute.",
@@ -207,11 +209,12 @@ window.SITE_DATA = {
     {
       titre: "Boutique25 — boutique en ligne",
       categorie: "perso",
-      icone: "🛒",
+      image: "assets/img/projets/boutique25.webp",
       tags: ["PHP / Symfony", "PostgreSQL", "Stripe", "Docker"],
       description:
-        "Boutique en ligne complète sous Symfony 7 : catalogue avec recherche et filtres, panier, comptes clients, parcours de commande avec paiement Stripe (ou simulé), email de confirmation et espace d'administration (produits, photos, commandes, clients). Base PostgreSQL, déploiement Docker sur Render : la première ouverture après une période d'inactivité peut prendre environ une minute. Le code est sur GitHub (github.com/Sylvain82/boutique25).",
+        "Boutique en ligne complète sous Symfony 7 : catalogue avec recherche et filtres, panier, comptes clients, parcours de commande avec paiement Stripe (ou simulé), email de confirmation et espace d'administration (produits, photos, commandes, clients). Base PostgreSQL, déploiement Docker sur Render : la première ouverture après une période d'inactivité peut prendre environ une minute.",
       lien: "https://boutique25.onrender.com/",
+      code: "https://github.com/Sylvain82/boutique25",
     },
     {
       titre: "Carnet de voyages en parallax",
