@@ -170,7 +170,7 @@ window.SITE_DATA = {
     {
       titre: "Trellow – tableau Kanban d'équipe",
       categorie: "metier",
-      icone: "kanban",
+      image: "assets/img/projets/trellow.webp",
       tags: ["JavaScript", "Firebase", "GitHub Actions"],
       description:
         "Tableau Kanban collaboratif inspiré de Trello, en un seul fichier HTML : glisser-déposer, présence et synchronisation en temps réel, limites WIP, récurrence, tableau de bord. L'application est protégée par connexion : le code et la documentation sont sur GitHub.",
