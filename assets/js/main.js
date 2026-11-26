@@ -33,6 +33,9 @@
     cart: '<circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/>',
     external: '<path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>',
     arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>',
+    mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
+    linkedin: '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>',
+    pin: '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/>',
     github: '<path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4"/><path d="M9 18c-4.51 2-5-2-7-2"/>',
   };
   const icon = (name, cls = "") =>
@@ -40,7 +43,7 @@
       ? `<svg class="ico ${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[name]}</svg>`
       : "";
 
-  /* Icônes des blocs « Ce que j'apporte » (accueil) */
+  /* Icônes déclarées dans le HTML avec data-icon (accueil, contact, pied de page) */
   document.querySelectorAll("[data-icon]").forEach((el) => (el.innerHTML = icon(el.dataset.icon)));
 
   /* ---------- Thème clair / sombre ---------- */
@@ -241,6 +244,7 @@
         <span class="muted"> — ${esc(c.organisme)}, ${esc(c.periode)}</span>
       </li>`).join("")
   );
+  fill("competences-cles", tagsHtml(D.competencesCles).replace('class="tags"', 'class="tags tags--key"'));
   fill(
     "competences",
     (D.competences || []).map((g) => `
@@ -249,6 +253,22 @@
         ${tagsHtml(g.items)}
       </div>`).join("")
   );
+
+  /* « Voir toutes les compétences » : détail replié à l'écran, toujours imprimé */
+  const skillsAll = document.getElementById("skills-all");
+  const skillsBtn = document.querySelector("[data-skills-toggle]");
+  if (skillsAll && skillsBtn && (D.competencesCles || []).length) {
+    const total = (D.competences || []).reduce((n, g) => n + g.items.length, 0);
+    const label = (open) => (open ? "Masquer le détail" : `Voir toutes les compétences (${total})`);
+    skillsAll.classList.add("is-collapsed");
+    skillsBtn.hidden = false;
+    skillsBtn.textContent = label(false);
+    skillsBtn.addEventListener("click", () => {
+      const open = skillsAll.classList.toggle("is-collapsed") === false;
+      skillsBtn.setAttribute("aria-expanded", String(open));
+      skillsBtn.textContent = label(open);
+    });
+  }
 
   /* ---------- Coordonnées (en-tête du CV imprimé) ---------- */
   const c = D.contact || {};
@@ -263,7 +283,7 @@
   /* ---------- Apparition douce au défilement ---------- */
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (!reduce && "IntersectionObserver" in window) {
-    const items = document.querySelectorAll(".pcard, .feature, .card, .stat, .timeline__item");
+    const items = document.querySelectorAll(".pcard, .feature, .card, .stat, .timeline__item, .contact-card");
     const io = new IntersectionObserver((entries) => {
       entries.forEach((en) => {
         if (en.isIntersecting) {
