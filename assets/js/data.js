@@ -190,7 +190,7 @@ window.SITE_DATA = {
     {
       titre: "Planification de vol de drone et cartographie",
       categorie: "perso",
-      icone: "map",
+      image: "assets/img/projets/drone.webp",
       tags: ["DJI Mini 4 Pro", "Photogrammétrie", "OpenDroneMap", "GSD"],
       description:
         "Préparation de missions de cartographie par drone : calcul de la résolution au sol (GSD) selon l'altitude et la caméra, génération de grilles de points de passage GPS pour couvrir une zone avec le bon recouvrement, puis traitement des photos en carte et modèle 3D avec OpenDroneMap.",
