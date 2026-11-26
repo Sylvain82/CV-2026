@@ -17,8 +17,9 @@ window.SITE_DATA = {
   },
 
   /* Expériences : de la plus récente à la plus ancienne.
-     - "accueil: true" : affichée aussi dans le parcours résumé de la page d'accueil
-     - "resume" : texte court pour l'accueil ; "description" : texte complet du CV */
+     - "accueil" / "resume" : réservés à un parcours résumé (bloc data-render="experiences-accueil"),
+       qui n'est plus affiché sur l'accueil (remplacé par les projets phares)
+     - "description" : texte complet du CV */
   experiences: [
     {
       poste: "Technicien méthodes",
@@ -118,6 +119,9 @@ window.SITE_DATA = {
     },
   ],
 
+  /* Compétences clés : mises en avant en haut du bloc Compétences du CV (6 à 8 conseillées) */
+  competencesCles: ["Gammes de travail", "Analyse des modifications BE", "SILOG", "SAP (fonctionnel)", "VBA / Excel", "PHP / Symfony", "JavaScript", "IA (Claude)"],
+
   competences: [
     {
       titre: "Méthodes & industrialisation",
@@ -147,7 +151,8 @@ window.SITE_DATA = {
 
   /* Projets.
      - categorie : "metier" (outils métier), "perso" (projets personnels) ou "formation" (projets de formation)
-     - accueil : true pour l'afficher dans "Projets récents" sur l'accueil
+     - accueil : true pour l'afficher dans "Projets phares" sur l'accueil (3 projets conseillés)
+     - resume (facultatif) : texte court utilisé sur l'accueil à la place de la description
      - image (facultatif) : capture d'écran (assets/img/projets/, format 16:10) ;
        sinon "icone" : nom d'une icône du fichier main.js (dice, kanban, chart, map, camera, cart…)
      - lien (facultatif) : site en ligne, démo ou dépôt GitHub (bouton principal)
@@ -174,6 +179,8 @@ window.SITE_DATA = {
     {
       titre: "Analyse de matchs de foot par vision par ordinateur",
       categorie: "perso",
+      accueil: true,
+      resume: "Détection des joueurs sur la vidéo d'un match, projection sur le terrain, statistiques d'équipe et export Excel, le tout calculé en local.",
       image: "assets/img/projets/analyse-match.webp",
       tags: ["Vision par ordinateur", "Roboflow Sports", "Statistiques", "Export Excel"],
       description:
@@ -200,6 +207,8 @@ window.SITE_DATA = {
     {
       titre: "DataFoot — statistiques de football",
       categorie: "metier",
+      accueil: true,
+      resume: "Classements, matchs du jour, fiches de clubs et meilleurs buteurs, alimentés par l'API football-data.org avec mise en cache côté serveur.",
       image: "assets/img/projets/datafoot.webp",
       tags: ["PHP / Symfony", "API", "JavaScript", "Docker"],
       description:
@@ -209,6 +218,8 @@ window.SITE_DATA = {
     {
       titre: "Boutique25 — boutique en ligne",
       categorie: "perso",
+      accueil: true,
+      resume: "Boutique Symfony complète : catalogue, panier, comptes clients, paiement Stripe, emails de confirmation et espace d'administration.",
       image: "assets/img/projets/boutique25.webp",
       tags: ["PHP / Symfony", "PostgreSQL", "Stripe", "Docker"],
       description:
